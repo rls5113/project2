@@ -38,28 +38,37 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  
-  User
-  .create({ userid:"rstuart", name: "Robert Stuart", email: "r@r.com", password:"you", role: "admin" })
-  .then(user => {
-    console.log(user.get("name")); 
-    console.log(user.get("userid")); 
-  });
-  User
-  .create({ userid:"dbenton", name: "Dawn Benton", email: "r@r.com", password:"you", role: "admin" })
-  .then(user => {
-    console.log(user.get("name")); 
-    console.log(user.get("userid")); 
-  });
-  User
-  .create({ userid:"rquintanar", name: "Ricardo Quintanar", email: "r@r.com", password:"you", role: "admin" })
-  .then(user => {
-    console.log(user.get("name")); 
-    console.log(user.get("userid")); 
-  });
 
-
+  User.create({
+    userid: "rstuart",
+    name: "Robert Stuart",
+    email: "r@r.com",
+    password: "you",
+    role: "admin"
+  }).then(function(user) {
+    console.log(user.get("name"));
+    console.log(user.get("userid"));
+  });
+  User.create({
+    userid: "dbenton",
+    name: "Dawn Benton",
+    email: "r@r.com",
+    password: "you",
+    role: "admin"
+  }).then(function(user) {
+    console.log(user.get("name"));
+    console.log(user.get("userid"));
+  });
+  User.create({
+    userid: "rquintanar",
+    name: "Ricardo Quintanar",
+    email: "r@r.com",
+    password: "you",
+    role: "admin"
+  }).then(function(user) {
+    console.log(user.get("name"));
+    console.log(user.get("userid"));
+  });
 
   return User;
 };
-

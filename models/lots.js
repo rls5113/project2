@@ -21,7 +21,7 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1, 50]
       }
-    },
+    }
   });
 
   Lot.associate = function(models) {
@@ -30,46 +30,38 @@ module.exports = function(sequelize, DataTypes) {
     });
   };
 
-
-  Lot
-  .create({ 
-    colorhexcode:"#FF0000", 
-    totalitemcount: "20", 
-    purchasedate: "04/28/2019", 
-    colordesc:"red", 
-    cost: "300.00" 
-  })
-  .then(lot => {
-    console.log(lot.get("colorhexcode")); 
-    console.log(lot.get("cost")); 
+  Lot.create({
+    colorhexcode: "#FF0000",
+    totalitemcount: "20",
+    purchasedate: "04/28/2019",
+    colordesc: "red",
+    cost: "300.00"
+  }).then(function(lot) {
+    console.log(lot.get("colorhexcode"));
+    console.log(lot.get("cost"));
   });
 
-  Lot
-  .create({ 
-    colorhexcode:"#FFFF00", 
-    totalitemcount: "30", 
-    purchasedate: "04/25/2019", 
-    colordesc:"yellow", 
-    cost: "600.00" 
-  })
-  .then(lot => {
-    console.log(lot.get("colorhexcode")); 
-    console.log(lot.get("cost")); 
+  Lot.create({
+    colorhexcode: "#FFFF00",
+    totalitemcount: "30",
+    purchasedate: "04/25/2019",
+    colordesc: "yellow",
+    cost: "600.00"
+  }).then(function(lot) {
+    console.log(lot.get("colorhexcode"));
+    console.log(lot.get("cost"));
   });
 
-  Lot
-  .create({ 
-    colorhexcode:"#0000FF", 
-    totalitemcount: "20", 
-    purchasedate: "04/30/2019", 
-    colordesc:"blue", 
-    cost: "200.00" 
-  })
-  .then(lot => {
-    console.log(lot.get("colorhexcode")); 
-    console.log(lot.get("cost")); 
+  Lot.create({
+    colorhexcode: "#0000FF",
+    totalitemcount: "20",
+    purchasedate: "04/30/2019",
+    colordesc: "blue",
+    cost: "200.00"
+  }).then(function(lot) {
+    console.log(lot.get("colorhexcode"));
+    console.log(lot.get("cost"));
   });
-
 
   return Lot;
 };

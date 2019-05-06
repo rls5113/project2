@@ -26,32 +26,26 @@ module.exports = function(sequelize, DataTypes) {
     });
   };
 
-  Item
-  .create({ 
-    description:"Pants", 
-    retailprice: 35, 
-    wholesaleprice: 25 
-  })
-  .then(item => {
-    console.log(item.get("description")); 
+  Item.create({
+    description: "Pants",
+    retailprice: 35,
+    wholesaleprice: 25
+  }).then(function(item) {
+    console.log(item.get("description"));
   });
-  Item
-  .create({ 
-    description:"Shirt", 
-    retailprice: 25, 
-    wholesaleprice: 15 
-  })
-  .then(item => {
-    console.log(item.get("description")); 
+  Item.create({
+    description: "Shirt",
+    retailprice: 25,
+    wholesaleprice: 15
+  }).then(function(item) {
+    console.log(item.get("description"));
   });
-  Item
-  .create({ 
-    description:"Dress", 
-    retailprice: 35, 
-    wholesaleprice: 25 
-  })
-  .then(item => {
-    console.log(item.get("description")); 
+  Item.create({
+    description: "Dress",
+    retailprice: 35,
+    wholesaleprice: 25
+  }).then(function(item) {
+    console.log(item.get("description"));
   });
 
   return Item;

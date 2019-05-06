@@ -45,5 +45,31 @@ module.exports = function(sequelize, DataTypes) {
     });
   };
 
+  Inventoryitem.create({
+    totalinstock: 30,
+    totalsales: 0,
+    invoiceId: 1,
+    lotcolorhexcode: "#FF0000",
+    itemid: 1
+  }).then(function(invoiceitem) {
+    console.log("totalinstock: " + invoiceitem.get("totalinstock"));
+    console.log("totalsales: " + invoiceitem.get("totalsales"));
+    console.log("invoiceId: " + invoiceitem.get("invoiceId"));
+    console.log("itemId: " + invoiceitem.get("itemId"));
+  });
+
+  Inventoryitem.create({
+    totalinstock: 30,
+    totalsales: 0,
+    invoiceId: 1,
+    lotcolorhexcode: "#FF0000",
+    itemid: 2
+  }).then(function(invoiceitem) {
+    console.log("totalinstock: " + invoiceitem.get("totalinstock"));
+    console.log("totalsales: " + invoiceitem.get("totalsales"));
+    console.log("invoiceId: " + invoiceitem.get("invoiceId"));
+    console.log("itemId: " + invoiceitem.get("itemId"));
+  });
+
   return Inventoryitem;
 };

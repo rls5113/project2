@@ -32,16 +32,14 @@ module.exports = function(sequelize, DataTypes) {
     });
   };
 
-  Invoice
-  .create({ 
-    date: sequelize.NOW, 
-    total: "2.0", 
-    customerId: "1" 
-  })
-  .then(invoice => {
-    console.log("date: "+invoice.get("date")); 
-    console.log("total: "+invoice.get("total")); 
-    console.log("customerId: "+invoice.get("customerId")); 
+  Invoice.create({
+    date: sequelize.NOW,
+    total: "2.0",
+    customerId: "1"
+  }).then(function(invoice) {
+    console.log("date: " + invoice.get("date"));
+    console.log("total: " + invoice.get("total"));
+    console.log("customerId: " + invoice.get("customerId"));
   });
 
   return Invoice;
