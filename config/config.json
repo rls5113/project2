@@ -8,11 +8,11 @@
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "testdb",
+    "password": "Roscoe5113!",
+    "database": "daybreak_testdb",
     "host": "localhost",
     "dialect": "mysql",
-    "logging": false
+    "logging": true
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",

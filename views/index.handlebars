@@ -6,20 +6,32 @@
         <h2>This is our Home Page!</h2>
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+            <label for="user-id">User ID </label>
+            <input type="text" id="user-userid" class="form-control" aria-describedby="user-userid" placeholder="Enter userid">
           </div>
           <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+            <label for="user-name">Name</label>
+            <input type="text" class="form-control" id="user-name" aria-describedby="user-name" placeholder="Name (first last)">
+          </div>
+          <div class="form-group">
+            <label for="user-email">Email</label>
+            <input type="text" class="form-control" id="user-email" aria-describedby="user-email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="user-description">Role</label>
+            <input class="form-control" id="user-role" aria-describedby="user-role" placeholder="[admin or clerk]">
+          </div>
+          <div class="form-group">
+            <label for="user-pw">Password</label>
+            <input class="form-control" id="user-pw" aria-describedby="user-pw" placeholder="Password">
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
+        <h3>Users:</h3>
+        <ul id="user-list" class="list-group">
+          {{#each Users}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
+            <a href="user/{{this.id}}">{{this.firstname}} {{this.lastname}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
           {{/each}}
