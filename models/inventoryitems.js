@@ -30,22 +30,22 @@ module.exports = function(sequelize, DataTypes) {
   Inventoryitem.associate = function(models) {
     Inventoryitem.belongsTo(models.Invoice, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
     Inventoryitem.belongsTo(models.Lot, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
     Inventoryitem.belongsTo(models.Item, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
       }
     });
   };
 
-  Inventoryitem.create({
+  /*  Inventoryitem.create({
     totalinstock: 30,
     totalsales: 0,
     invoiceId: 1,
@@ -70,6 +70,6 @@ module.exports = function(sequelize, DataTypes) {
     console.log("invoiceId: " + invoiceitem.get("invoiceId"));
     console.log("itemId: " + invoiceitem.get("itemId"));
   });
-
+*/
   return Inventoryitem;
 };

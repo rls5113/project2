@@ -38,7 +38,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-
+  /*
   User.create({
     userid: "rstuart",
     name: "Robert Stuart",
@@ -69,6 +69,6 @@ module.exports = function(sequelize, DataTypes) {
     console.log(user.get("name"));
     console.log(user.get("userid"));
   });
-
+*/
   return User;
 };

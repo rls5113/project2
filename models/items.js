@@ -25,7 +25,7 @@ module.exports = function(sequelize, DataTypes) {
       onDelete: "set null"
     });
   };
-
+  /*
   Item.create({
     description: "Pants",
     retailprice: 35,
@@ -47,6 +47,6 @@ module.exports = function(sequelize, DataTypes) {
   }).then(function(item) {
     console.log(item.get("description"));
   });
-
+*/
   return Item;
 };
