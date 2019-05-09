@@ -3,6 +3,27 @@
 
 -- use daybreak_db;
 
+<<<<<<< HEAD:db/schema.sql
+-- CREATE TABLE `Users` (
+--  `username` int(11) NOT NULL AUTO_INCREMENT,
+--  `firstname` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+--  `lastname` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+--  `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+--  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+--  `created` datetime NOT NULL,
+--  `modified` datetime NOT NULL,
+--  PRIMARY KEY (`id`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- CREATE TABLE `Customers`
+-- (
+--  `username`        int auto_increment NOT NULL ,
+--  `firstname` varchar(25) NOT NULL ,
+--  `lastname`  varchar(25) NOT NULL ,
+--  `email`     varchar(50) NOT NULL ,
+-- PRIMARY KEY (`id`)
+-- );
+=======
 CREATE TABLE "Users"
 (
  "userid"   varchar(20) NOT NULL ,
@@ -21,6 +42,7 @@ CREATE TABLE "Customers"
  "email"     varchar(50) NOT NULL ,
 PRIMARY KEY ("id")
 );
+>>>>>>> master:models/schema.sql
 
 
 

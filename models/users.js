@@ -32,43 +32,24 @@ module.exports = function(sequelize, DataTypes) {
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
       validate: {
         len: [1, 100]
       }
     }
   });
-  /*
-  User.create({
-    userid: "rstuart",
-    name: "Robert Stuart",
-    email: "r@r.com",
-    password: "you",
-    role: "admin"
-  }).then(function(user) {
-    console.log(user.get("name"));
-    console.log(user.get("userid"));
+
+  //This will check if hashed password entered by user can be compared to the hashed password stored in the database
+  User.prototype.validPassword = function(password) {
+    return bcrypt.compareSync(password, this.password);
+  };
+  // This runs before the user is created, This is hashing our password before it's entered into the database
+  User.hook("beforeCreate", function(user) {
+    user.password = bcrypt.hashSync(
+      user.password,
+      bcrypt.genSaltSync(10),
+      null
+    );
   });
-  User.create({
-    userid: "dbenton",
-    name: "Dawn Benton",
-    email: "r@r.com",
-    password: "you",
-    role: "admin"
-  }).then(function(user) {
-    console.log(user.get("name"));
-    console.log(user.get("userid"));
-  });
-  User.create({
-    userid: "rquintanar",
-    name: "Ricardo Quintanar",
-    email: "r@r.com",
-    password: "you",
-    role: "admin"
-  }).then(function(user) {
-    console.log(user.get("name"));
-    console.log(user.get("userid"));
-  });
-*/
   return User;
 };
