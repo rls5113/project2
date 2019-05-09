@@ -1,6 +1,6 @@
 var chai = require("chai");
 var chaiHttp = require("chai-http");
-var server = require("../server");
+// var server = require("../server");
 var db = require("../models");
 var expect = chai.expect;
 
@@ -12,12 +12,12 @@ var request;
 describe("GET /api/users", function() {
   // Before each test begins, create a new request server for testing
   // & delete all examples from the db
-  beforeEach(function() {
-    request = chai.request(server);
-    return db.sequelize.sync({ force: true });
-  });
+  // beforeEach(function() {
+  //   request = chai.request(server);
+  //   return db.sequelize.sync({ force: true });
+  // });
 
-  it("should find all users", function(done) {
+  xit("should find all users", function(done) {
     // Add some examples to the db to test with
     db.User.bulkCreate([
       {

@@ -29,7 +29,7 @@ module.exports = function(sequelize, DataTypes) {
       // onDelete: "set null"
     });
   };
-
+  /* 
   Lot.create({
     colorhexcode: "#FF0000",
     totalitemcount: "20",
@@ -62,6 +62,6 @@ module.exports = function(sequelize, DataTypes) {
     console.log(lot.get("colorhexcode"));
     console.log(lot.get("cost"));
   });
-
+*/
   return Lot;
 };

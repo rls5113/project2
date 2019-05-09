@@ -12,7 +12,7 @@
     "database": "daybreak_testdb",
     "host": "localhost",
     "dialect": "mysql",
-    "logging": true
+    "logging": false
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
