@@ -1,2 +1,4 @@
 models/index.js
+models/schema.sql
+routes/htmlRoutes.js
 node_modules
