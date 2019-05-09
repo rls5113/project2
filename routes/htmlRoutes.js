@@ -44,8 +44,6 @@ module.exports = function (app) {
   });
 
 
-  // This is where the user will have access to the google API
-  // User will be given option to change the time left on timer and then start the timer
   app.get("/home", isAuthenticated, function (req, res) {
     res.render("home", {
       title: "",
