@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Style.css">
+<title>Users Page</title>
+</head>
+<body>
+    <form>
+                          </h1> User - DayBreak Retail Management </h1> 
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+
+<div id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h1>{{msg}}</h1>
+        <form class="clearfix mb-4" action="POST">
+          <div class="form-group">
+            <label for="example-text">User Information</label>
+            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+          </div>
+          <div class="form-group">
+            
+          </div>
+        </form>
+        <h1> Users Information </h1>
+                        <label for="userid"><i class="fas fa-portrait"></i>User ID</label>
+                        <input type="text" id="user id" name="user id" placeholder="?">
+
+                        <label for="name"><i class="fas fa-file-signature"></i>Name</label>
+                        <input type="text" id="name" name="fullname" placeholder="John Doe">
+    
+                        <label for="email"><i class="fas fa-envelope-square"></i>Email</label>
+                        <input type="text" id="email" name="email" placeholder="john@example.com">
+
+                        <label for="role"><i class="fas fa-user-tag"></i>Role</label>
+                        <input type="text" id="role" name="role" placeholder="Role Type">
+
+                        <label for="password"><i class="fas fa-lock"></i>Password</label>
+                        <input type="text" id="password" name="password" placeholder="">
+
+                        <div>
+                         <button id="submit" class="btn btn-primary float-right">Submit</button>
+
+                    </div>
+                </div>      
+        <ul id="example-list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
