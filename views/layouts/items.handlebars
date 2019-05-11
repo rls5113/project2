@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Style.css">
+    <title>Items Page</title>
+</head>
+<body>
+    <form>
+                          </h1> Items - DayBreak Retail Management </h1> 
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+            
+                        <h2> Items </h2>
+
+                            <label for="id"><i class="fas fa-key"></i>ID</label>
+                            <input type="text" id="item id" name="item id" placeholder=id>
+                    
+                            <label for="description"><i class="fas fa-file-alt"></i>Description</label>
+                            <input type="text" id="des" name="item description" placeholder="description">
+
+                            <label for="retailprice"><i class="fas fa-dollar-sign"></i>Retail Price</label>
+                            <input type="text" id="price" name="retail price" placeholder="price">
+
+                            <label for="wholesalelprice"><i class="fas fa-dollar-sign"></i>Wholesale Price</label>
+                            <input type="text" id="wholesale" name="wholesale price" placeholder="price">
+
+                         </form>
+                           <div>
+                         <button id="submit" class="btn btn-primary float-right">Submit</button>
+
+                    </div>
+                </div>      
+        <ul id="example-list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+
+<body>
+
+</body>
+</html>
